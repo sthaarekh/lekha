@@ -9,7 +9,6 @@ const StatementItem = (props) => {
           <div>
             <div className="item-name">{data.description}</div>
             <div className="item-time">{moment(data.date).format('h:mm A MM/DD')}</div>
-
           </div>
           <div className="item-price">Rs. {data.amount}</div>
         </div>
