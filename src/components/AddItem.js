@@ -5,7 +5,7 @@ const AddItem = () => {
     const context = useContext(lekhaContext);
     const { addData } = context;
     const [data, setData] = useState({ amount: "", description: "", category: "" }); // default category is "Lend"
-    const categories = ["Food", "Health", "Clothes", "Transportation", "Entertainment", "Others"]; // add more categories as needed
+    const categories = ["Food", "Health", "Education", "Clothes", "Transportation", "Entertainment", "Others"]; // add more categories as needed
     const payment = ["Self", "Borrow"];
 
     const handleClick = (e) => {
