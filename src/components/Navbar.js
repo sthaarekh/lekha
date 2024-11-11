@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
             <div className="flex align-center pl-10 md:space-x-5 text-xl">
               <Link className={`nav-link ${location.pathname === "/" ? "text-white" : "text-gray-400"} hover:text-white`} to="/">Home</Link>
-              <Link className={`nav-link ${location.pathname === "/analytics" ? "text-blue-500" : "text-gray-200"} hover:text-blue-300`} to="/analytics">Analytics</Link>
+              <Link className={`nav-link ${location.pathname === "/analytics" ?"text-white" : "text-gray-400"} hover:text-white`} to="/analytics">Analytics</Link>
             </div>
           </div>
 

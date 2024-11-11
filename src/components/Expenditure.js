@@ -34,7 +34,7 @@ const Expenditure = () => {
     const monthIndex = (currentMonthIndex - i + 12) % 12; 
     lastFiveMonths.push(months[monthIndex]);
   }
-  
+
   const data2 = lastFiveMonths.map((month, index) => ({
     name: month,
     value: getMonthlyExpense(currentMonthIndex - (5 - index))
@@ -82,16 +82,18 @@ const Expenditure = () => {
                 <Legend layout="vertical" align="right" verticalAlign="middle" />
                 </PieChart>
               </div>
+
+            <div className='pl-16'>
+              <BarChart width={500} height={300} data={data2}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="value" fill="#87BB62" />
+              </BarChart>
+            </div>
             </div>
             
-            <BarChart width={500} height={300} data={data2}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#87BB62" />
-            </BarChart>
-    
 
        </div>
     </div>
