@@ -13,23 +13,23 @@ const Home = () => {
         // eslint-disable-next-line
     }, [])
   return (
-    <div className='container'>
-                <div className="row">
-                    <div className="col">
-                    <AddItem/>
-                    </div>
-                    <div className="col">
-                        <div className="row">{
-                        trans.map((trans)=>{
-                            return <TransItem key={trans._id} trans={trans}/>;
-                        })
-                    }
-                    </div>
-                    </div>
-                </div>
-                <Transaction/>
-                <Statements/>
-            </div>
+   <div className="container mx-auto p-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="col">
+      <AddItem />
+    </div>
+    <div className="col">
+      <div className="flex space-x-2">
+        {trans.map((transaction) => (
+          <TransItem key={transaction._id} trans={transaction} />
+        ))}
+      </div>
+    </div>
+  </div>
+  <Transaction />
+  <Statements />
+</div>
+
             
   )
 }

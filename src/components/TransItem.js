@@ -13,18 +13,22 @@ const TransItem = (props) => {
   };
 
   return (
-    <div className="col-md-4">
-      <div className="my-3">
-        <div className="card cardStyle">
-          <div className="card-body">
-            <h2 className="card-title">Rs. {trans.amount}</h2>
-            <hr />
-            <p className="card-text">{trans.description}</p>
-            <i className="fa-regular fa-trash mx-2" onClick={handleDelete}> &nbsp; Resolved</i>
-          </div>
+    <div className="my-3">
+      <div className="min-w-[200px] rounded overflow-hidden shadow-lg">
+        <div className="p-4">
+          <h2 className="text-3xl">Rs. {trans.amount}</h2>
+          <hr className="my-4" />
+          <p className="text-gray-700 text-xl">{trans.description}</p>
+          <i
+            className="fa-regular fa-trash mt-6 text-gray-500 hover:text-gray-700 cursor-pointer ml-1"
+            onClick={handleDelete}
+          >
+            &nbsp; Resolved
+          </i>
         </div>
       </div>
-    </div>
+</div>
+
   );
 };
 

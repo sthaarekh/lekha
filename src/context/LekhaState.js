@@ -19,6 +19,7 @@ const NoteState = (props) => {
     setData(json);
   }
 
+
   //Add a data
   const addData = async(amount, description, category) => {
     const response = await fetch(`${host}/api/data/addexpense`, {

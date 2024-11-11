@@ -13,10 +13,10 @@ const Statements = () => {
 
   return (
     <div>
-      <div className="row my-3">
-        <h2>Statements</h2>
+      <div className=" mt-10">
+        <h2 className='text-3xl m-4'>Statements</h2>
         <hr />
-        {data.map((item) => (
+        {data.slice().reverse().map((item) => (
           <StatementItem key={item._id} data={item} />
         ))}
       </div>

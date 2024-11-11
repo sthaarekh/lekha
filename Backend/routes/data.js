@@ -14,7 +14,7 @@ router.get('/getexpense',async(req,res)=>{
 
 // Route 2: Add expense to data
 router.post('/addexpense', [
-    body('description', 'Enter a valid description').isLength({ min: 5 }),
+    body('description', 'Enter a valid description').isLength({ min: 3 }),
     body('category', 'Enter a valid category').isLength({ min: 2 }),
     body('amount','Enter a valid amount').notEmpty().isNumeric(),
 ], async (req, res) => {

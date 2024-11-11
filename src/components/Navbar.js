@@ -8,25 +8,20 @@ const Navbar = () => {
   return (
     <div>
         <div>
-        <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div className="container-fluid">
-            <img src={logo} alt="logo"className="align-text-top mx-3" width="50" height="50"/>
-                <a className="navbar-brand" href="/">Lekha</a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname==="/"?"active":" "}`} aria-current="page" to="/">Home</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className={`nav-link ${location.pathname==="/analytics"?"active":" "}`} to="/analytics">Analytics</Link>
-                    </li>
-                </ul>
-                </div>
+        <nav className="bg-blue-600 text-white">
+          <div className="container mx-10 flex align-left items-center p-4">
+            <div className="flex items-center">
+              <img src={logo} alt="logo" className="h-12 w-12 mr-3" />
+              <a className="text-xl" href="/">Lekha</a>
             </div>
-         </nav>
+            <div className="flex align-center pl-10 md:space-x-5 text-xl">
+              <Link className={`nav-link ${location.pathname === "/" ? "text-white" : "text-gray-400"} hover:text-white`} to="/">Home</Link>
+              <Link className={`nav-link ${location.pathname === "/analytics" ? "text-blue-500" : "text-gray-200"} hover:text-blue-300`} to="/analytics">Analytics</Link>
+            </div>
+          </div>
+
+</nav>
+
       </div>
     </div>
   )

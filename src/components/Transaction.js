@@ -5,7 +5,7 @@ import AddTrans from './AddTrans'
 const Transaction = () => {
   return (
     <div>
-      <div className="row">
+      <div className="grid">
             <AddTrans/>
         </div>
     </div>
